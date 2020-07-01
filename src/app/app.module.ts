@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from "@angular/common/http";
 import { LoginModule } from './page/login/login.module';
-import { FormLoginComponent } from './module/users/form-login/form-login.component';
-import { GerenciaClienteComponent } from './page/gerencia-cliente/gerencia-cliente.component';
+import { HomeModule } from './page/home/home.module';
+import { GerenciaUserModule } from './page/gerencia-user/gerencia-user.module';
+import { GerenciaClienteModule } from './page/gerencia-cliente/gerencia-cliente.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,10 @@ import { GerenciaClienteComponent } from './page/gerencia-cliente/gerencia-clien
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LoginModule
+    LoginModule,
+    HomeModule,
+    GerenciaUserModule,
+    GerenciaClienteModule
   ],
   bootstrap: [AppComponent]
 })

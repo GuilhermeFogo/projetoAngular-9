@@ -15,10 +15,9 @@ export class RouteGuard implements CanActivate {
     }
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
         if(this.cooke.ExistCookie('Session')){
-            
             return true;
         }else{
-            this.Router.navigateByUrl('')
+            this.Router.navigateByUrl('');
             return false;
         }
     }
